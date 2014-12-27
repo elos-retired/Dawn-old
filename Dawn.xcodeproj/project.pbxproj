@@ -14,7 +14,7 @@
 		22015ACC1A4E565200E199A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22015ACA1A4E565200E199A8 /* Main.storyboard */; };
 		22015ACE1A4E565200E199A8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22015ACD1A4E565200E199A8 /* Images.xcassets */; };
 		22015AD11A4E565200E199A8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22015ACF1A4E565200E199A8 /* LaunchScreen.xib */; };
-		22015ADD1A4E565200E199A8 /* DawnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22015ADC1A4E565200E199A8 /* DawnTests.swift */; };
+		22015ADD1A4E565200E199A8 /* DawnSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22015ADC1A4E565200E199A8 /* DawnSpec.swift */; };
 		98844973F9EF9B866BB43BC8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E62660D3F4F2E47448CE3E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,7 @@
 		22015AD01A4E565200E199A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		22015AD61A4E565200E199A8 /* DawnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DawnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22015ADB1A4E565200E199A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22015ADC1A4E565200E199A8 /* DawnTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DawnTests.swift; sourceTree = "<group>"; };
+		22015ADC1A4E565200E199A8 /* DawnSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DawnSpec.swift; sourceTree = "<group>"; };
 		5B4D5FD4673A18E3CF3BC95B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		88A6CF5ED19ACF56AA8211B2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AA5D28005931256E0D97498D /* Pods_Dawn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dawn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,7 +121,7 @@
 		22015AD91A4E565200E199A8 /* DawnTests */ = {
 			isa = PBXGroup;
 			children = (
-				22015ADC1A4E565200E199A8 /* DawnTests.swift */,
+				22015ADC1A4E565200E199A8 /* DawnSpec.swift */,
 				22015ADA1A4E565200E199A8 /* Supporting Files */,
 			);
 			path = DawnTests;
@@ -354,7 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22015ADD1A4E565200E199A8 /* DawnTests.swift in Sources */,
+				22015ADD1A4E565200E199A8 /* DawnSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
