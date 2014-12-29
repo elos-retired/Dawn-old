@@ -7,10 +7,40 @@
 //
 
 import Foundation
+import SwiftyJSON
+import UIKit
 
 class User {
-    var id: String?
+    var id: ObjectId?
     var createdAt: NSDate?
     var name: String?
     var key: String?
+    
+    class func create() -> User {
+        let user = User()
+        user.name = UIDevice.currentDevice().identifierForVendor.UUIDString
+        
+        var request = NSMutableURLRequest(URL: NSURL(string: "http://localhost:8000/v1/authenticate")!)
+        var session = NSURLSession.sharedSession()
+        request.HTTPMethod = "POST"
+        request.HTTPBody = ("name=" + user.name!).dataUsingEncoding(NSUTF8StringEncoding)
+        
+        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+            if let strData = NSString(data: data, encoding: NSUTF8StringEncoding) {
+                let data = JSON(strData)
+                user.id = ObjectId(mongoId: data["id"].string)
+                
+                if let strCreatedAt = data["createdAt"].string {
+                    let dateFormatter = NSDateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd'T'hh:mm:ss.SSSSxxx"
+                    user.createdAt = dateFormatter.dateFromString(strCreatedAt)
+                }
+                
+                user.key = data["key"].string
+            }
+        })
+        
+        task.resume()
+        return user
+    }
 }
