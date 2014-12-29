@@ -29,14 +29,13 @@ class User {
             let data = JSON(data: data)
             user.id = ObjectId(mongoId: data["id"].string)
             
-            if let strCreatedAt = data["createdAt"].string {
+            if let strCreatedAt = data["created_at"].string {
                 let dateFormatter = NSDateFormatter()
-                dateFormatter.dateFormat = "yyyy-MM-dd'T'hh:mm:ss.SSSSxxx"
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSxxx"
                 user.createdAt = dateFormatter.dateFromString(strCreatedAt)
             }
-            
+                        
             user.key = data["key"].string
-            println(user.idKeyPair())
         })
         
         task.resume()
