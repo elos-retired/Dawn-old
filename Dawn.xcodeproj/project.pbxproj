@@ -53,6 +53,7 @@
 		2254702B1A527A70004C6113 /* ElosDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElosDateFormatter.swift; path = Util/ElosDateFormatter.swift; sourceTree = "<group>"; };
 		2254702D1A528330004C6113 /* ObjectIdSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjectIdSpec.swift; path = Util/ObjectIdSpec.swift; sourceTree = "<group>"; };
 		225470321A528FAA004C6113 /* ObjectId+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ObjectId+Equatable.swift"; path = "Util/ObjectId+Equatable.swift"; sourceTree = "<group>"; };
+		225470341A52933E004C6113 /* Dawn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dawn-Bridging-Header.h"; sourceTree = "<group>"; };
 		22C3B8001A4F865200345244 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		5B4D5FD4673A18E3CF3BC95B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		88A6CF5ED19ACF56AA8211B2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				22015AC31A4E565200E199A8 /* AppDelegate.swift */,
+				225470341A52933E004C6113 /* Dawn-Bridging-Header.h */,
 				22015AC81A4E565200E199A8 /* ViewController.swift */,
 				22015ACA1A4E565200E199A8 /* Main.storyboard */,
 				22015ACD1A4E565200E199A8 /* Images.xcassets */,

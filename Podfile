@@ -7,4 +7,5 @@ target "DawnTests", :exclusive => true do
     pod 'Quick', :git => 'https://github.com/Quick/Quick'
 end
 
+pod 'SocketRocket', :git => 'https://github.com/square/SocketRocket'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON'
