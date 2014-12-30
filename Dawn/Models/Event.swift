@@ -10,8 +10,8 @@ import Foundation
 
 class Event {
     var id: ObjectId!
-    var createdAt: NSDate!
     
+    var createdAt: NSDate?
     var name: String?
     var startTime: NSDate?
     var endTime: NSDate?
