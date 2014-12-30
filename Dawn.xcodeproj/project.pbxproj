@@ -17,6 +17,7 @@
 		22015ADD1A4E565200E199A8 /* DawnSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22015ADC1A4E565200E199A8 /* DawnSpec.swift */; };
 		224B711F1A5096EE00C4DAFB /* ObjectId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224B711E1A5096EE00C4DAFB /* ObjectId.swift */; };
 		2254702A1A5141FA004C6113 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225470291A5141FA004C6113 /* Event.swift */; };
+		2254702C1A527A71004C6113 /* ElosDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254702B1A527A70004C6113 /* ElosDateFormatter.swift */; };
 		22C3B8011A4F865200345244 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3B8001A4F865200345244 /* User.swift */; };
 		98844973F9EF9B866BB43BC8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E62660D3F4F2E47448CE3E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		ABEBEB28A9C202A63852475B /* Pods_DawnTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86CA91C22AA23AF41E91232 /* Pods_DawnTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -46,6 +47,7 @@
 		22015ADC1A4E565200E199A8 /* DawnSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DawnSpec.swift; sourceTree = "<group>"; };
 		224B711E1A5096EE00C4DAFB /* ObjectId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjectId.swift; path = Util/ObjectId.swift; sourceTree = "<group>"; };
 		225470291A5141FA004C6113 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Models/Event.swift; sourceTree = "<group>"; };
+		2254702B1A527A70004C6113 /* ElosDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElosDateFormatter.swift; path = Util/ElosDateFormatter.swift; sourceTree = "<group>"; };
 		22C3B8001A4F865200345244 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		5B4D5FD4673A18E3CF3BC95B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		88A6CF5ED19ACF56AA8211B2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				22015AC51A4E565200E199A8 /* Dawn.xcdatamodeld */,
 				22015AC11A4E565200E199A8 /* Supporting Files */,
 				22C3B8001A4F865200345244 /* User.swift */,
+				2254702B1A527A70004C6113 /* ElosDateFormatter.swift */,
 				225470291A5141FA004C6113 /* Event.swift */,
 				224B711E1A5096EE00C4DAFB /* ObjectId.swift */,
 			);
@@ -360,6 +363,7 @@
 				224B711F1A5096EE00C4DAFB /* ObjectId.swift in Sources */,
 				22015AC41A4E565200E199A8 /* AppDelegate.swift in Sources */,
 				2254702A1A5141FA004C6113 /* Event.swift in Sources */,
+				2254702C1A527A71004C6113 /* ElosDateFormatter.swift in Sources */,
 				22015AC71A4E565200E199A8 /* Dawn.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

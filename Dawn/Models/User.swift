@@ -28,13 +28,7 @@ class User {
         var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
             let data = JSON(data: data)
             user.id = ObjectId(mongoId: data["id"].string)
-            
-            if let strCreatedAt = data["created_at"].string {
-                let dateFormatter = NSDateFormatter()
-                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSxxx"
-                user.createdAt = dateFormatter.dateFromString(strCreatedAt)
-            }
-                        
+            user.createdAt = ElosDateFormatter.dateFromString(data["created_at"].string)
             user.key = data["key"].string
         })
         
