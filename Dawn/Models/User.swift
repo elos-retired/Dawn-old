@@ -10,11 +10,21 @@ import Foundation
 import SwiftyJSON
 import UIKit
 
+var currentUserInstance: User?
+
 class User {
     var id: ObjectId!
     var createdAt: NSDate!
     var name: String!
     var key: String!
+    
+    class func currentUser() -> User? {
+        return currentUserInstance
+    }
+    
+    class func setCurrentUser(user: User?) {
+        currentUserInstance = user
+    }
     
     class func create() -> User {
         let user = User()
@@ -36,7 +46,11 @@ class User {
         return user
     }
     
-    func idKeyPair() -> String {
-        return "\(id.toString())-\(key)"
+    func idKeyPair() -> String? {
+        if id != nil && key != nil {
+            return "\(id.toString())-\(key)"
+        } else {
+            return nil
+        }
     }
 }
