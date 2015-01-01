@@ -28,6 +28,14 @@ class ElosDateFormatter: NSDateFormatter {
         }
     }
     
+    class func stringFromDate(date: NSDate?) -> String? {
+        if date != nil {
+            return ElosDateFormatter.getSharedFormatter().stringFromDate(date!)
+        } else {
+            return nil
+        }
+    }
+    
     override init() {
         super.init()
         self.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSxxx"

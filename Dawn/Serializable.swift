@@ -28,6 +28,8 @@ class Serializable: NSObject {
                     array.append(item.toDict())
                 }
                 propertiesDict.setValue(array, forKey: propertyName)
+            } else if propertyValue is NSDate {
+                propertiesDict.setValue(ElosDateFormatter.stringFromDate(propertyValue as? NSDate), forKey: propertyName)
             } else {
                 propertiesDict.setValue(propertyValue, forKey: propertyName)
             }
