@@ -60,7 +60,7 @@
 		225470321A528FAA004C6113 /* ObjectId+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ObjectId+Equatable.swift"; path = "Util/ObjectId+Equatable.swift"; sourceTree = "<group>"; };
 		225470341A52933E004C6113 /* Dawn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dawn-Bridging-Header.h"; sourceTree = "<group>"; };
 		225470351A538F6E004C6113 /* ElosConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElosConnection.swift; path = Util/ElosConnection.swift; sourceTree = "<group>"; };
-		229EA4901A55012A00804DE1 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
+		229EA4901A55012A00804DE1 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Serializable.swift; path = Dawn/Util/Serializable.swift; sourceTree = SOURCE_ROOT; };
 		229EA4921A55074000804DE1 /* SerializableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SerializableSpec.swift; path = Util/SerializableSpec.swift; sourceTree = "<group>"; };
 		22C3B8001A4F865200345244 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		5B4D5FD4673A18E3CF3BC95B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
