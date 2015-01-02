@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Event {
+class Event: Serializable {
     var id: ObjectId!
     
     var createdAt: NSDate?

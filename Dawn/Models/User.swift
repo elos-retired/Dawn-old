@@ -12,7 +12,7 @@ import UIKit
 
 var currentUserInstance: User?
 
-class User {
+class User: Serializable {
     var id: ObjectId!
     var createdAt: NSDate!
     var name: String!
