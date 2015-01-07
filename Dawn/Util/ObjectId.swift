@@ -61,4 +61,8 @@ class ObjectId {
     func toString() -> String {
         return NSString(format: "%08X%06X%04X%06X", timestamp, machine, pid, increment)
     }
+    
+    func getTimestamp() -> NSDate {
+        return NSDate(timeIntervalSince1970: NSTimeInterval(timestamp))
+    }
 }

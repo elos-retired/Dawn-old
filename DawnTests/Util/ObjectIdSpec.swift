@@ -14,7 +14,7 @@ class ObjectIdSpec: QuickSpec {
             }
             
             it("generates different ObjectIds") {
-                expect(id1.toString()).notTo(equal(id2.toString()))
+                expect(id1).notTo(equal(id2))
             }
             
             it("has a timestamp") {
@@ -58,6 +58,19 @@ class ObjectIdSpec: QuickSpec {
             
             it("has the right increment") {
                 expect(id.increment).to(equal(0xed7d45))
+            }
+        }
+        
+        describe("ObjectId instance methods") {
+            let idString = "54a253eaf8e2d15d21ed7d45"
+            let id = ObjectId(mongoId: idString)!
+            
+            it("returns the correct string representation of itself") {
+                expect(id.toString()).to(equal(idString.uppercaseString))
+            }
+            
+            it("returns the correct timestamp as an NSDate") {
+                expect(id.getTimestamp()).to(equal(NSDate(timeIntervalSince1970: NSTimeInterval(0x54a253ea))))
             }
         }
     }

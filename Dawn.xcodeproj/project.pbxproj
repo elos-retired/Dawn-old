@@ -26,6 +26,7 @@
 		229EA4931A55074000804DE1 /* SerializableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229EA4921A55074000804DE1 /* SerializableSpec.swift */; };
 		229EA4951A550D1800804DE1 /* ElosDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254702B1A527A70004C6113 /* ElosDateFormatter.swift */; };
 		229EA4961A551A4C00804DE1 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229EA4901A55012A00804DE1 /* Serializable.swift */; };
+		229EA4971A5742BE00804DE1 /* ObjectId+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225470321A528FAA004C6113 /* ObjectId+Equatable.swift */; };
 		22C3B8011A4F865200345244 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3B8001A4F865200345244 /* User.swift */; };
 		98844973F9EF9B866BB43BC8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E62660D3F4F2E47448CE3E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		ABEBEB28A9C202A63852475B /* Pods_DawnTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86CA91C22AA23AF41E91232 /* Pods_DawnTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -401,6 +402,7 @@
 				2254702E1A528330004C6113 /* ObjectIdSpec.swift in Sources */,
 				229EA4931A55074000804DE1 /* SerializableSpec.swift in Sources */,
 				229EA4951A550D1800804DE1 /* ElosDateFormatter.swift in Sources */,
+				229EA4971A5742BE00804DE1 /* ObjectId+Equatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
