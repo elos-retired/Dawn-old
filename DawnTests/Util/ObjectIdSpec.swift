@@ -73,5 +73,26 @@ class ObjectIdSpec: QuickSpec {
                 expect(id.getTimestamp()).to(equal(NSDate(timeIntervalSince1970: NSTimeInterval(0x54a253ea))))
             }
         }
+        
+        describe("ObjectId equality") {
+            let idString = "54a253eaf8e2d15d21ed7d45"
+            let id1 = ObjectId(mongoId: idString)!
+            let id2 = ObjectId()
+            
+            it("evaluates equality of two ObjectId objects") {
+                expect(id1 == ObjectId(mongoId: idString)).to(beTrue())
+                expect(id1 == id2).to(beFalse())
+            }
+            
+            it("evaluates equality of an ObjectId and a String") {
+                expect(id1 == idString).to(beTrue())
+                expect(id2 == idString).to(beFalse())
+            }
+            
+            it("evaluates equality of a String and an ObjectId") {
+                expect(idString == id1).to(beTrue())
+                expect(idString == id2).to(beFalse())
+            }
+        }
     }
 }
