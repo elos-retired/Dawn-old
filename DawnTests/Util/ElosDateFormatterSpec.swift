@@ -23,11 +23,9 @@ class ElosDateFormatterSpec: QuickSpec {
                 expect(ElosDateFormatter.stringFromDate(nil)).to(beNil())
             }
             
-            it("returns the correct elos-formatted string for a date") {
+            it("is the inverse operation of ElosDateFormatter.dateFromString") {
                 let testString = ElosDateFormatter.stringFromDate(date)
                 expect(testString).notTo(beNil())
-                
-                // To deal with some timezone-related issues
                 expect(ElosDateFormatter.dateFromString(testString)).to(equal(date))
             }
         }
