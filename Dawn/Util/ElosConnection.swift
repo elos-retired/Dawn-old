@@ -41,6 +41,14 @@ class ElosConnection: NSObject, SRWebSocketDelegate {
         
     }
     
+    func close() {
+        socket.close()
+    }
+    
+    func sendMessage(string: String) {
+        socket.send(string)
+    }
+    
     func webSocket(webSocket: SRWebSocket!, didReceiveMessage message: AnyObject!) {
         
     }
