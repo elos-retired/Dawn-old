@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Type {
+enum Action {
     case Get
     case Post
     case Delete
@@ -16,5 +16,5 @@ enum Type {
 }
 
 class Message {
-    var type: Type!
+    var action: Action!
 }
