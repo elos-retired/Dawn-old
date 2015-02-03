@@ -6,15 +6,40 @@
 //  Copyright (c) 2015 Elos. All rights reserved.
 //
 
+import Argo
 import Foundation
+import Runes
 
-enum Action {
-    case Get
-    case Post
-    case Delete
-    case Error
+enum Action: String {
+    case Get = "GET"
+    case Post = "POST"
+    case Delete = "DELETE"
+    case Error = "ERROR"
 }
 
-class Message {
-    var action: Action!
+extension Action: JSONDecodable {
+    static func decode(j: JSONValue) -> Action? {
+        if let actionString: String = j.value() {
+            return Action(rawValue: actionString)
+        } else {
+            return .None
+        }
+    }
+}
+
+struct Message {
+    let action: Action
+    let data: NSDictionary
+}
+
+extension Message: JSONDecodable {
+    static func create(action: Action)(data: NSDictionary) -> Message {
+        return Message(action: action, data: data)
+    }
+    
+    static func decode(j: JSONValue) -> Message? {
+        return Message.create
+            <^> j <| "action"
+            <*> j <| "data"
+    }
 }

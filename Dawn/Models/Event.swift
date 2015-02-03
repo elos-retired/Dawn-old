@@ -6,40 +6,29 @@
 //  Copyright (c) 2014 Elos. All rights reserved.
 //
 
+import Argo
 import Foundation
+import Runes
 
-class Event: Serializable {
-    var id: ObjectId!
-    
-    var createdAt: NSDate?
-    var name: String?
-    var startTime: NSDate?
-    var endTime: NSDate?
-    
-    class func create() -> Event {
-        let event = Event()
-        
-        event.id = ObjectId()
-        event.createdAt = NSDate()
-        
-        return event
+struct Event {
+    let id: ObjectId
+    let createdAt: NSDate?
+    let name: String?
+    let startTime: NSDate?
+    let endTime: NSDate?
+}
+
+extension Event: JSONDecodable {
+    static func create(id: ObjectId)(createdAt: NSDate?)(name: String?)(startTime: NSDate?)(endTime: NSDate?) -> Event {
+        return Event(id: id, createdAt: createdAt, name: name, startTime: startTime, endTime: endTime)
     }
     
-    class func create(name: String) -> Event {
-        let event = Event.create()
-        event.name = name
-        return event
-    }
-    
-    class func create(name: String, startTime: NSDate) -> Event {
-        let event = Event.create(name)
-        event.startTime = startTime
-        return event
-    }
-    
-    class func create(name: String, startTime: NSDate, endTime: NSDate) -> Event {
-        let event = Event.create(name, startTime: startTime)
-        event.endTime = endTime
-        return event
+    static func decode(j: JSONValue) -> Event? {
+        return Event.create
+            <^> j <| "id"
+            <*> j <| "createdAt"
+            <*> j <| "name"
+            <*> j <| "startTime"
+            <*> j <| "endTime"
     }
 }
