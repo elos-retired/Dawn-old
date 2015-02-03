@@ -8,7 +8,6 @@
 
 import Foundation
 import SocketRocket
-import SwiftyJSON
 
 var elosConnectionInstance: ElosConnection?
 

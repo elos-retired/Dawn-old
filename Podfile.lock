@@ -5,14 +5,12 @@ PODS:
   - Quick (0.2.0)
   - Runes (1.1.1)
   - SocketRocket (0.3.1-beta2)
-  - SwiftyJSON (2.1.2)
 
 DEPENDENCIES:
   - Argo (from `https://github.com/thoughtbot/Argo`)
   - Nimble (from `https://github.com/Quick/Nimble`)
   - Quick (from `https://github.com/Quick/Quick`)
   - SocketRocket (from `https://github.com/square/SocketRocket`)
-  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON`)
 
 EXTERNAL SOURCES:
   Argo:
@@ -23,8 +21,6 @@ EXTERNAL SOURCES:
     :git: https://github.com/Quick/Quick
   SocketRocket:
     :git: https://github.com/square/SocketRocket
-  SwiftyJSON:
-    :git: https://github.com/SwiftyJSON/SwiftyJSON
 
 CHECKOUT OPTIONS:
   Argo:
@@ -39,9 +35,6 @@ CHECKOUT OPTIONS:
   SocketRocket:
     :commit: 954750c0184f8584b44ddd84694e24c01eb9c325
     :git: https://github.com/square/SocketRocket
-  SwiftyJSON:
-    :commit: f5d08738c287508ffc9fd0672741dbca9ef50a32
-    :git: https://github.com/SwiftyJSON/SwiftyJSON
 
 SPEC CHECKSUMS:
   Argo: f99f70372dfabaf22b781a8391c585323e8df55b
@@ -49,6 +42,5 @@ SPEC CHECKSUMS:
   Quick: fdcce541eb5d73f5ac78f95c770ca6d6d69f0b81
   Runes: 5268f17b84bd4522494a3ab3291f18c84e3e9924
   SocketRocket: 70df1983148525857ced17c57207bfb939bc6b8e
-  SwiftyJSON: b03e3fcc0340816a7935802f5fd39510e3543bd5
 
 COCOAPODS: 0.36.0.beta.1

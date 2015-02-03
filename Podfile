@@ -9,4 +9,3 @@ end
 
 pod 'Argo', :git => 'https://github.com/thoughtbot/Argo'
 pod 'SocketRocket', :git => 'https://github.com/square/SocketRocket'
-pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON'
