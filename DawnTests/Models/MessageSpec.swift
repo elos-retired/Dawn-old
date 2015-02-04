@@ -15,7 +15,6 @@ class MessageSpec: QuickSpec {
         describe("JSON decoding") {
             it("decodes a JSON string into an action and some data") {
                 let msgData = "{action:\"POST\",data:{}}".dataUsingEncoding(NSUTF8StringEncoding)!
-                let json = NSJSONSerialization.JSONObjectWithData(msgData, options: NSJSONReadingOptions(0), error: .None)
             }
         }
     }
