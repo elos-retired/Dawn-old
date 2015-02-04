@@ -25,6 +25,8 @@
 		22935F171A807DF300600133 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22935F161A807DF300600133 /* JSONDecodable.swift */; };
 		22935F191A80A21000600133 /* MessageSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22935F181A80A21000600133 /* MessageSpec.swift */; };
 		22935F1A1A80A28700600133 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229EA4A41A62160C00804DE1 /* Message.swift */; };
+		22935F1C1A81F9F300600133 /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22935F1B1A81F9F300600133 /* RLMSupport.swift */; };
+		22935F1D1A81F9F300600133 /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22935F1B1A81F9F300600133 /* RLMSupport.swift */; };
 		229EA4911A55012A00804DE1 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229EA4901A55012A00804DE1 /* Serializable.swift */; };
 		229EA4931A55074000804DE1 /* SerializableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229EA4921A55074000804DE1 /* SerializableSpec.swift */; };
 		229EA4951A550D1800804DE1 /* ElosDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254702B1A527A70004C6113 /* ElosDateFormatter.swift */; };
@@ -68,6 +70,7 @@
 		225470351A538F6E004C6113 /* ElosConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElosConnection.swift; path = Util/ElosConnection.swift; sourceTree = "<group>"; };
 		22935F161A807DF300600133 /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONDecodable.swift; path = Extensions/JSONDecodable.swift; sourceTree = "<group>"; };
 		22935F181A80A21000600133 /* MessageSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageSpec.swift; path = Models/MessageSpec.swift; sourceTree = "<group>"; };
+		22935F1B1A81F9F300600133 /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
 		229EA4901A55012A00804DE1 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Serializable.swift; path = Dawn/Util/Serializable.swift; sourceTree = SOURCE_ROOT; };
 		229EA4921A55074000804DE1 /* SerializableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SerializableSpec.swift; path = Util/SerializableSpec.swift; sourceTree = "<group>"; };
 		229EA4981A5E38BE00804DE1 /* ElosDateFormatterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElosDateFormatterSpec.swift; path = Util/ElosDateFormatterSpec.swift; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 		22015AC01A4E565200E199A8 /* Dawn */ = {
 			isa = PBXGroup;
 			children = (
+				22935F1B1A81F9F300600133 /* RLMSupport.swift */,
 				22015AC31A4E565200E199A8 /* AppDelegate.swift */,
 				225470341A52933E004C6113 /* Dawn-Bridging-Header.h */,
 				22015AC81A4E565200E199A8 /* ViewController.swift */,
@@ -402,6 +406,7 @@
 				229EA4A51A62160C00804DE1 /* Message.swift in Sources */,
 				229EA4911A55012A00804DE1 /* Serializable.swift in Sources */,
 				2254702C1A527A71004C6113 /* ElosDateFormatter.swift in Sources */,
+				22935F1C1A81F9F300600133 /* RLMSupport.swift in Sources */,
 				225470331A528FAA004C6113 /* ObjectId+Equatable.swift in Sources */,
 				22015AC71A4E565200E199A8 /* Dawn.xcdatamodeld in Sources */,
 			);
@@ -412,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				229EA4961A551A4C00804DE1 /* Serializable.swift in Sources */,
+				22935F1D1A81F9F300600133 /* RLMSupport.swift in Sources */,
 				22015ADD1A4E565200E199A8 /* DawnSpec.swift in Sources */,
 				2254702F1A528A89004C6113 /* ObjectId.swift in Sources */,
 				2254702E1A528330004C6113 /* ObjectIdSpec.swift in Sources */,
