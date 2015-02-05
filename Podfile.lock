@@ -3,9 +3,9 @@ PODS:
     - Runes
   - Nimble (0.2.0)
   - Quick (0.2.0)
-  - Realm (0.90.4):
-    - Realm/Headers (= 0.90.4)
-  - Realm/Headers (0.90.4)
+  - Realm (0.90.5):
+    - Realm/Headers (= 0.90.5)
+  - Realm/Headers (0.90.5)
   - Runes (1.1.1)
   - SocketRocket (0.3.1-beta2)
 
@@ -13,7 +13,7 @@ DEPENDENCIES:
   - Argo (from `https://github.com/thoughtbot/Argo`)
   - Nimble (from `https://github.com/Quick/Nimble`)
   - Quick (from `https://github.com/Quick/Quick`)
-  - Realm
+  - Realm (= 0.90.5)
   - SocketRocket (from `https://github.com/square/SocketRocket`)
 
 EXTERNAL SOURCES:
@@ -44,7 +44,7 @@ SPEC CHECKSUMS:
   Argo: f99f70372dfabaf22b781a8391c585323e8df55b
   Nimble: 79679d4cd5a3710db75e1dd9f5479f71842da6a6
   Quick: fdcce541eb5d73f5ac78f95c770ca6d6d69f0b81
-  Realm: 43ec5595f51849fabccd2213cfad90bc4ff9a3c0
+  Realm: aea25534b97be77995650c2339aa6ed010dfcc8a
   Runes: 5268f17b84bd4522494a3ab3291f18c84e3e9924
   SocketRocket: 70df1983148525857ced17c57207bfb939bc6b8e
 

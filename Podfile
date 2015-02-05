@@ -8,5 +8,5 @@ target "DawnTests", :exclusive => true do
 end
 
 pod 'Argo', :git => 'https://github.com/thoughtbot/Argo'
-pod 'Realm'
+pod 'Realm', '0.90.5'
 pod 'SocketRocket', :git => 'https://github.com/square/SocketRocket'
