@@ -8,16 +8,17 @@
 
 import Argo
 import Foundation
+import Realm
 import Runes
 import UIKit
 
 var currentUserInstance: User?
 
-class User: Serializable {
-    var id: ObjectId!
-    var createdAt: NSDate!
-    var name: String!
-    var key: String!
+class User: RLMObject {
+    dynamic var id: String!
+    dynamic var createdAt: NSDate!
+    dynamic var name: String!
+    dynamic var key: String!
     
     class func currentUser() -> User? {
         return currentUserInstance
@@ -42,12 +43,12 @@ class User: Serializable {
             
             if let j: AnyObject = json {
                 currentUserInstance = User.decode(JSONValue.parse(j))
-                if let u = currentUserInstance {
-                    if let j = u.toJsonString() {
-                        NSLog(u.id.toString())
-                        NSLog(j)
-                    }
-                }
+                
+                let realm = RLMRealm.defaultRealm()
+                
+                realm.beginWriteTransaction()
+                realm.addObject(currentUserInstance)
+                realm.commitWriteTransaction()
             }
         })
         
@@ -55,20 +56,20 @@ class User: Serializable {
         return user
     }
     
-    override init() {
+    class func create(id: String, createdAt: NSDate, name: String, key: String) -> User {
+        let user = User()
         
-    }
-    
-    init(id _id: ObjectId, createdAt _createdAt: NSDate, name _name: String, key _key: String) {
-        id = _id
-        createdAt = _createdAt
-        name = _name
-        key = _key
+        user.id = id
+        user.createdAt = createdAt
+        user.name = name
+        user.key = key
+        
+        return user
     }
     
     func idKeyPair() -> String? {
         if id != nil && key != nil {
-            return "\(id.toString())-\(key)"
+            return "\(id)-\(key)"
         } else {
             return nil
         }
@@ -76,8 +77,8 @@ class User: Serializable {
 }
 
 extension User: JSONDecodable {
-    class func create(id: ObjectId)(createdAt: NSDate)(name: String)(key: String) -> User {
-        return User(id: id, createdAt: createdAt, name: name, key: key)
+    class func create(id: String)(createdAt: NSDate)(name: String)(key: String) -> User {
+        return User.create(id, createdAt: createdAt, name: name, key: key)
     }
     
     class func decode(j: JSONValue) -> User? {

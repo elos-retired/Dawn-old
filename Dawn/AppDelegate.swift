@@ -6,8 +6,9 @@
 //  Copyright (c) 2014 Elos. All rights reserved.
 //
 
-import UIKit
 import CoreData
+import Realm
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,8 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        let user = User.create()
+        RLMRealm.setSchemaVersion(1, forRealmAtPath: RLMRealm.defaultRealmPath(), withMigrationBlock: { migration, oldSchemaVersion in
+            
+        })
+        
+        let realm = RLMRealm.defaultRealm()
+        
+        if let firstUser = User.allObjects().firstObject() as? User {
+            NSLog("Exists: " + firstUser.name)
+        } else {
+            let user = User.create()
+        }
         return true
     }
 
