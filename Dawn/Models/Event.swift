@@ -8,22 +8,31 @@
 
 import Argo
 import Foundation
+import Realm
 import Runes
 
-struct Event {
-    let id: ObjectId
-    let createdAt: NSDate?
-    let name: String?
-    let startTime: NSDate?
-    let endTime: NSDate?
+class Event: RLMObject {
+    dynamic var id: String!
+    dynamic var createdAt: NSDate?
+    dynamic var name: String?
+    dynamic var startTime: NSDate?
+    dynamic var endTime: NSDate?
+    
+    class func create(id: String)(createdAt: NSDate?)(name: String?)(startTime: NSDate?)(endTime: NSDate?) -> Event {
+        let event = Event()
+        
+        event.id = id
+        event.createdAt = createdAt
+        event.name = name
+        event.startTime = startTime
+        event.endTime = endTime
+        
+        return event
+    }
 }
 
 extension Event: JSONDecodable {
-    static func create(id: ObjectId)(createdAt: NSDate?)(name: String?)(startTime: NSDate?)(endTime: NSDate?) -> Event {
-        return Event(id: id, createdAt: createdAt, name: name, startTime: startTime, endTime: endTime)
-    }
-    
-    static func decode(j: JSONValue) -> Event? {
+    class func decode(j: JSONValue) -> Event? {
         return Event.create
             <^> j <| "id"
             <*> j <| "createdAt"
